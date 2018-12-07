@@ -5,7 +5,7 @@
                                             $brand-warning: #ffec39 !default;
                                             $brand-danger: #fc483f !default;
                                             $brand-info: #000072 !default;
-                                            $darkBrown1: #341314;
+                                            $darkBrown1: #F18021;
                                             $lightBrown: #7f3836;
                                             $lightBrown2: #681214;
                                             $darkGray: #252525;
@@ -154,7 +154,7 @@
 
                                             .navbar-default .navbar-nav>li>a {
                                                 color: $darkBrown1 !important;
-                                                font-size: 20px;
+                                                font-size: 16px;
                                             }
 
                                             #map img {
@@ -184,7 +184,7 @@
 
                                             footer {
                                                 font-size: 12px;
-                                                background-color: $lightBrown2;
+                                                background-color: black;
                                                 color: $white;
                                                 padding: 10px 0;
 
@@ -207,19 +207,20 @@
                                                     i {
                                                         padding: 4px 0px;
                                                         margin: 0 3px;
-                                                        border: 1px dashed #ffffff;
+                                                        // border: 1px dashed #ffffff;
                                                         font-style: normal;
                                                         font-weight: 600;
                                                         font-size: 12px;
                                                         font-family: FontAwesome;
                                                         width: 22px;
+                                                        color: white !important;
                                                     }
                                                 }
                                             }
 
                                             //start of footermenu
                                             .footer-up {
-                                                background-color: $darkBrown1;
+                                                background-color: black;
 
                                                 .flex-item-container {
                                                     width: 90%;
@@ -239,18 +240,19 @@
                                                 }
 
                                                 .contact--btn {
-                                                    color: #cdc5c5 !important;
+                                                    color: white !important;
                                                     @extend .btn--brown;
                                                     font-size: inherit;
                                                     text-align: right;
+                                                    background-color: #000;
                                                 }
 
                                                 a[href] {
-                                                    color: #715a5b;
+                                                    color: white;
                                                 }
 
                                                 p {
-                                                    color: #715a5b;
+                                                    color: white;
                                                 }
 
                                                 p,
@@ -259,7 +261,7 @@
                                                 }
 
                                                 address {
-                                                    color: #715a5b;
+                                                    color: white;
                                                 }
 
                                                 .flex-item.footer-up__abt-shop,
@@ -396,7 +398,27 @@
                                             }
 
                                             .line--height {
-                                                line-height: 1;
+                                                line-height: 1.5;
+                                            }
+
+                                            .txt-black {
+                                                color: black;
+                                            }
+
+                                            .top-mar {
+                                                margin-top: 10px !important;
+                                            }
+
+                                            .mar-right {
+                                                margin-right: 3px;
+                                            }
+
+                                            .btm-mar {
+                                                margin-bottom: 20px;
+                                            }
+
+                                            .bg-black {
+                                                background-color: #000 !important;
                                             }
 
                                             .font-rg {
@@ -533,15 +555,18 @@
                                                 @include button-variant($white,
                                                 $darkBrown1,
                                                 $white);
-                                                border: 1px dashed $white;
+                                                // border: 1px dashed $white;
                                                 text-transform: uppercase;
                                                 letter-spacing: 1px;
+                                                border: none;
 
                                                 &:hover,
                                                 &:active,
                                                 &:focus {
                                                     color: $white;
                                                     background-color: darken($darkBrown1, 0);
+                                                    border: none;
+
                                                 }
                                             }
 
@@ -549,7 +574,7 @@
                                                 color: $white !important;
                                                 font-weight: normal;
                                                 background-color: darken($darkBrown1, 0);
-                                                border: 1px dashed #fff !important;
+                                                // border: 1px dashed #fff !important;
                                             }
 
                                             .border-line {
@@ -1154,6 +1179,10 @@
                                                         @extend .btn--brown;
                                                         width: 85px;
                                                         @include margin(25px null null null);
+
+                                                        &:hover {
+                                                            background-color: #c5661c;
+                                                        }
                                                     }
 
                                                     a.user-name {
@@ -1777,7 +1806,7 @@
                                                         @extend .btn--brown;
                                                         color: $lightBrown2;
                                                         font-weight: normal;
-                                                        border: 1px dashed $lightBrown2;
+                                                        // border: 1px dashed $lightBrown2;
                                                         border-radius: 4px;
                                                         @include padding(3px 0);
                                                         font-size: 15px;
@@ -1830,7 +1859,7 @@
                                                 .new-arrival__title {
                                                     h1 {
                                                         color: $darkBrown1;
-                                                        @include margin(20px 0 25px);
+                                                        @include margin(20px 0 30px);
                                                         font-family: 'FjallaOne-Regular';
                                                     }
 
@@ -1880,18 +1909,16 @@
 
                                                     .new-arrival__banner-detail {
 
-                                                        h3,
-                                                        h4 {
+                                                        h3 {
                                                             font-family: 'FjallaOne-Regular';
+                                                            @include margin(10px null 0 null);
                                                             color: $white;
                                                         }
 
-                                                        h3 {
-                                                            @include margin(10px null 0 null);
-                                                        }
-
                                                         h4 {
-                                                            height: 40px;
+                                                            font-family: 'FjallaOne-Regular';
+                                                            color: $white;
+                                                            height: 50px;
                                                             @include margin(0 null null null);
                                                             display: -webkit-box;
                                                             -webkit-line-clamp: 2;
@@ -1918,10 +1945,15 @@
 
                                                         .buynow--btn {
                                                             @extend .btn--brown;
-                                                            @include padding(3px 20px);
-                                                            border: 1px dashed $darkBrown1;
-                                                            background-color: white;
-                                                            color: $darkBrown1;
+                                                            @include padding(3px 35px);
+                                                            // border: 1px dashed $darkBrown1;
+                                                            background-color: $darkBrown1;
+                                                            color: white;
+                                                            border: none;
+
+                                                            &:hover {
+                                                                background-color: #c5661c;
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -2028,7 +2060,7 @@
                                                 .featured__banner-detail {
                                                     .featured__cloth-desc {
                                                         h3 {
-                                                            color: $darkBrown1;
+                                                            color: black;
                                                             @include margin(10px null 5px null);
 
                                                             i {
@@ -2037,7 +2069,7 @@
                                                         }
 
                                                         h4 {
-                                                            height: 40px;
+                                                            height: 30px;
                                                             color: $darkGray;
                                                             font-family: 'FjallaOne-Regular';
                                                             @include margin(0 null null null);
@@ -2066,7 +2098,7 @@
 
                                                     .featured__icon-cart {
                                                         @include position(absolute,
-                                                        null 0 115px null);
+                                                        null 0 107px null);
                                                         @include size(35px,
                                                         35px);
                                                         padding: 6px;
@@ -2096,12 +2128,21 @@
                                                 .buy--btn {
                                                     @extend .btn--brown;
                                                     @include padding(3px 35px);
+
+                                                    &:hover {
+                                                        background-color: #c5661c;
+                                                    }
                                                 }
 
                                                 .view--more {
                                                     // button
                                                     @extend .btn--brown;
                                                     width: 135px;
+
+
+                                                    &:hover {
+                                                        background-color: #c5661c;
+                                                    }
                                                 }
                                             }
 
@@ -2120,7 +2161,7 @@
 
                                                 .cloth-buy__title {
                                                     h1 {
-                                                        color: $darkBrown1;
+                                                        color: black;
                                                         @include margin(20px 0 30px);
                                                         font-family: 'FjallaOne-Regular';
                                                     }
@@ -2150,11 +2191,12 @@
                                                     background-color: #ededed;
 
                                                     h2 {
-                                                        color: $darkBrown1;
+                                                        color: black;
+                                                        font-family: 'FjallaOne-Regular';
                                                     }
 
                                                     p.line--height {
-                                                        line-height: 1;
+                                                        line-height: 1.5;
                                                         color: $darkGray;
                                                         word-wrap: break-word;
                                                         display: -webkit-box;
@@ -2172,6 +2214,10 @@
                                                         font-weight: normal;
                                                         font-size: 15px;
                                                         @include margin(15px null null null);
+
+                                                        &:hover {
+                                                            background-color: #c5661c;
+                                                        }
                                                     }
 
                                                     &:before {
@@ -2247,6 +2293,10 @@
                                                         .blog__desc {
                                                             overflow: hidden;
 
+                                                            h3 {
+                                                                font-family: 'FjallaOne-Regular';
+                                                            }
+
                                                             p:last-child {
                                                                 &:after {
                                                                     content: '\02192';
@@ -2262,7 +2312,7 @@
                                                             }
 
                                                             color: $white;
-                                                            background-color: $darkBrown1;
+                                                            background-color: black;
                                                             @include padding(1px 35px);
                                                             height: 176px;
 
@@ -2272,7 +2322,7 @@
                                                             }
 
                                                             p {
-                                                                line-height: 1;
+                                                                line-height: 1.5;
                                                             }
 
                                                             .typedin-desc {
@@ -2351,7 +2401,7 @@
 
                                                     .sale__banner-detail {
                                                         h3 {
-                                                            color: $darkBrown1;
+                                                            color: black;
                                                             @include margin(0 null null null);
 
                                                             i {
@@ -2362,6 +2412,7 @@
                                                         h4 {
                                                             height: 40px;
                                                             color: $darkGray;
+                                                            font-family: 'FjallaOne-Regular';
                                                             @include margin(null null 5px null);
                                                             display: -webkit-box;
                                                             -webkit-line-clamp: 2;
@@ -2375,6 +2426,10 @@
                                                 .buy--btn {
                                                     @extend .btn--brown;
                                                     @include padding(3px 35px);
+
+                                                    &:hover {
+                                                        background-color: #c5661c;
+                                                    }
                                                 }
 
                                                 .view--more {
@@ -2384,6 +2439,10 @@
                                                     @include padding(3px);
                                                     font-weight: normal;
                                                     @include margin(null null 25px);
+
+                                                    &:hover {
+                                                        background-color: #c5661c;
+                                                    }
                                                 }
 
                                                 .absolute {
@@ -2490,7 +2549,7 @@
                                                         width: 175px;
                                                         text-transform: uppercase;
                                                         color: $darkBrown1;
-                                                        border: 1px dashed $darkBrown1;
+                                                        // border: 1px dashed $darkBrown1;
                                                         letter-spacing: 1px;
 
                                                         &:focus,
@@ -3208,7 +3267,7 @@
                                                     li:nth-child(3) {
                                                         button {
                                                             padding: 1px 10px 2px 10px;
-                                                            border: 1px dashed black;
+                                                            // border: 1px dashed black;
                                                             width: 338px;
                                                             text-align: left;
                                                             letter-spacing: 1px;
@@ -3244,7 +3303,7 @@
                                                 color: #ffffff;
                                                 background-color: #341314;
                                                 border-color: #ffffff;
-                                                border: 1px dashed #ffffff;
+                                                // border: 1px dashed #ffffff;
                                                 text-transform: uppercase;
                                                 letter-spacing: 1px;
                                                 padding: 5px 25px;
@@ -3426,7 +3485,7 @@
                                                 width: 175px;
                                                 text-transform: uppercase;
                                                 color: $darkBrown1;
-                                                border: 1px dashed $darkBrown1;
+                                                // border: 1px dashed $darkBrown1;
                                                 letter-spacing: 1px;
 
                                                 &:focus,
@@ -3544,7 +3603,7 @@
                                                 &:focus {
                                                     background-color: $darkBrown1;
                                                     color: $white;
-                                                    border: 1px dashed $white;
+                                                    // border: 1px dashed $white;
                                                 }
                                             }
 
@@ -3664,7 +3723,7 @@
 
                                                 .item-return--btn {
                                                     color: $darkBrown1;
-                                                    border: 1px dashed $darkBrown1;
+                                                    // border: 1px dashed $darkBrown1;
                                                     padding: 0 12px; // @include button-size($padding-vertical: 0, $padding-horizontal: 12px, $font-size: 14px, $line-height: 1.428571429, $border-radius: 0);
                                                     text-align: left;
                                                 }
@@ -3743,7 +3802,7 @@
 
                                                 .enquiry-form {
                                                     @include padding(35px 60px 35px 35px);
-                                                    border: 1px dashed $darkBrown1;
+                                                    // border: 1px dashed $darkBrown1;
                                                 }
 
                                                 .send--btn {
@@ -3859,7 +3918,7 @@
                                                 flex: 1;
 
                                                 .border {
-                                                    border: 1px dashed #fff;
+                                                    // border: 1px dashed #fff;
 
                                                     .location--btn {
                                                         @extend .btn--brown;
@@ -4082,13 +4141,13 @@
                                                     li:not(:first-child) a {
                                                         width: 100%;
                                                         height: 100%;
-                                                        border: 1px dashed $darkBrown1;
+                                                        // border: 1px dashed $darkBrown1;
                                                         @include display(flex);
                                                         @include align-items(center);
                                                         @include justify-content(center);
 
                                                         &:hover {
-                                                            border: 1px dashed white;
+                                                            // border: 1px dashed white;
                                                             color: white;
                                                             background-color: $darkBrown1;
                                                         }
@@ -4366,4 +4425,15 @@
 
                                             .wd200 {
                                                 width: auto;
+                                            }
+
+                                            .btn-white {
+                                                background-color: $white !important;
+                                                color: black !important;
+                                                border: none;
+
+                                                &:hover {
+                                                    background-color: #c5661c !important;
+                                                    color: white !important;
+                                                }
                                             }

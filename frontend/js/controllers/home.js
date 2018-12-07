@@ -43,26 +43,38 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, CartService, $st
     $scope.newArrivals = [{
         productId: '1',
         image: 'img/home/8.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
         extLink: 'home'
     }, {
         productId: '2',
         image: 'img/home/9.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
         extLink: 'home'
     }, {
         productId: '3',
         image: 'img/home/10.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
         extLink: 'home'
     }, {
         productId: '4',
         image: 'img/home/8.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
         extLink: 'home'
     }, {
         productId: '5',
         image: 'img/home/9.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
         extLink: 'home'
     }, {
         productId: '6',
         image: 'img/home/10.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
         extLink: 'home'
     }, ];
 
@@ -73,18 +85,26 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, CartService, $st
     $scope.featured = [{
         productId: '1',
         image: 'img/home/8.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
         extLink: 'home'
     }, {
         productId: '2',
         image: 'img/home/9.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
         extLink: 'home'
     }, {
         productId: '3',
         image: 'img/home/10.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
         extLink: 'home'
     }, {
         productId: '4',
         image: 'img/home/8.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
         extLink: 'home'
     }, ];
 
@@ -95,7 +115,8 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, CartService, $st
     $scope.getthelook = {
         id: '1',
         majorImage: 'img/home/15.jpg',
-        title: 'lorem ipsum is dummy'
+        title: 'lorem ipsum is dummy',
+        description: 'lorem ipsum is dummy It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset'
     };
     // <!--End of Buy The Look-->
 
@@ -128,31 +149,45 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, CartService, $st
     $scope.sale = [{
             productId: '1',
             image: 'img/home/11.jpg',
+            price: '2899',
+            productName: 'Lines full sleeve shirt with rollup',
             extLink: 'home'
         }, {
             productId: '2',
             image: 'img/home/12.jpg',
+            price: '2899',
+            productName: 'Lines full sleeve shirt with rollup',
             extLink: 'home'
         }, {
             productId: '3',
             image: 'img/home/13.jpg',
+            price: '2899',
+            productName: 'Lines full sleeve shirt with rollup',
             extLink: 'home'
         }, {
             productId: '4',
             image: 'img/home/14.jpg',
+            price: '2899',
+            productName: 'Lines full sleeve shirt with rollup',
             extLink: 'home'
         },
         {
             productId: '5',
             image: 'img/home/14.jpg',
+            price: '2899',
+            productName: 'Lines full sleeve shirt with rollup',
             extLink: 'home'
         }, {
             productId: '6',
             image: 'img/home/11.jpg',
+            price: '2899',
+            productName: 'Lines full sleeve shirt with rollup',
             extLink: 'home'
         }, {
             productId: '7',
             image: 'img/home/12.jpg',
+            price: '2899',
+            productName: 'Lines full sleeve shirt with rollup',
             extLink: 'home'
         },
     ];

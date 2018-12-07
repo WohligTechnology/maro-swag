@@ -58,9 +58,10 @@
                                     <div class="get-left">
                                         <h3 class="homepg-slider-product-cost"><i class="fa fa-inr" aria-hidden="true"></i>{{newArrival.price
                                             |number:0}}</h3>
-                                        <h4 class="homepg-slider-product-name text-uppercase">{{newArrival.productName}}</h4>
+                                        <h4 class="homepg-slider-product-name text-capitalize  ">{{newArrival.productName}}</h4>
                                         <div class="abslt-buynow-btn">
-                                            <buttton class="btn buynow--btn btn--mob-modal text-uppercase" ui-sref="individual-page({id: newArrival.productId})">buy</buttton>
+                                            <buttton class="btn btn-white buynow--btn btn--mob-modal text-uppercase"
+                                                ui-sref="individual-page({id: newArrival.productId})">buy</buttton>
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +92,7 @@
                             <div class="featured__cloth-desc">
                                 <h3 class="homepg-slider-product-cost"><i class="fa fa-inr" aria-hidden="true"></i>{{new.price
                                     |number:0}}</h3>
-                                <h4 class="homepg-slider-product-name text-uppercase">{{new.productName}}</h4>
+                                <h4 class="homepg-slider-product-name text-capitalize">{{new.productName}}</h4>
                             </div>
                             <div class="featured__icon-heart">
                                 <i ng-class="checkWishlist(new.productId)" aria-hidden="true" ng-click="addRemoveToWishlist(new)"></i>
@@ -113,7 +114,7 @@
     </div>
 </section>
 <!--End of Featured Cloth section-->
-<!--Start of Cloth Buy section-->
+<!--Start of Buy the Look section-->
 <section>
     <div class="cloth-buy relate">
         <div class="container">
@@ -126,7 +127,7 @@
                         <h1 class="homepg-title text-uppercase cloth-buy--border--line">buy the look</h1>
                     </div>
                     <div class="cloth-buy__desc relate">
-                        <h2 class="mg-top-zero text-uppercase">{{getthelook.title}}</h2>
+                        <h2 class="mg-top-zero text-capitalize">{{getthelook.title}}</h2>
                         <p class="line--height">{{getthelook.description}}
                         </p>
                         <p>
@@ -139,7 +140,7 @@
         </div>
     </div>
 </section>
-<!--End of Cloth Buy section-->
+<!--End of Buy the Look section-->
 <!--Start of Blog section-->
 <article>
     <div class="blog">
@@ -151,12 +152,12 @@
                 <flex-slider flex-slide="blog in blogs track by $index" prev-text="" next-text="" animation="slide"
                     item-width="400" min-items="3">
                     <li class="relate">
-                        <article class="blog__banner-detail relate">
+                        <article class="blog__banner-detail relate mar-right">
                             <a ui-sref="inner-blogs({id:blog._id})"> <img ng-src="{{blog.image}}" alt="" class="img-responsive"></a>
 
                             <div class="blog__desc">
                                 <h3 class="text-uppercase">{{blog.name}}</h3>
-                                <p class="typedin-desc">{{blog.description}}</p>
+                                <p class="typedin-desc line--height">{{blog.description}}</p>
                                 <p class="relate extra-content"><a ui-sref="inner-blogs({id:blog._id})">Read more</a></p>
                             </div>
                         </article>
@@ -181,8 +182,8 @@
                         <div class="sale__banner-detail relate">
                             <img ng-src="{{new.image}}" alt="" class="img-responsive">
                             <div class="sale__cloth-desc">
-                                <h4 class="text-uppercase">{{new.productName}}</h4>
-                                <h3><i class="fa fa-inr" aria-hidden="true"></i>{{new.price |number:0}}</h3>
+                                <h4 class="text-capitalize">{{new.productName}}</h4>
+                                <h3 class="btm-mar"><i class="fa fa-inr" aria-hidden="true"></i>{{new.price |number:0}}</h3>
                                 <div class="abslt-buynow-btn">
                                     <buttton class="btn buy--btn btn--mob-modal text-uppercase" ui-sref="individual-page({id: new.productId})">View</buttton>
                                 </div>
