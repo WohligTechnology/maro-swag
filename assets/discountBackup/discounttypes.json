@@ -1,0 +1,35 @@
+{ 
+    "_id" : ObjectId("59d329e334d0832185b7f577"), 
+    "createdAt" : ISODate("2017-10-03T06:10:43.929+0000"), 
+    "updatedAt" : ISODate("2017-10-16T06:09:34.487+0000"), 
+    "name" : "Buy 1 Get x Off Buy 2 Get 2x Off", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59e44d48f255331e48fc428f"), 
+    "createdAt" : ISODate("2017-10-16T06:10:16.188+0000"), 
+    "updatedAt" : ISODate("2017-10-16T06:10:16.188+0000"), 
+    "name" : "Buy Goods Worth x Get Free Gift", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ede2fcd30c7e2ab3324ece"), 
+    "createdAt" : ISODate("2017-10-23T12:39:24.917+0000"), 
+    "updatedAt" : ISODate("2017-10-24T10:42:44.803+0000"), 
+    "name" : "Discount of Rs X on Y amount shopping", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59f06bc7647252477439a1e4"), 
+    "createdAt" : ISODate("2017-10-25T10:47:35.605+0000"), 
+    "updatedAt" : ISODate("2017-10-25T10:47:35.605+0000"), 
+    "name" : "Get a Discount Coupon of Rs X when buying goods worth Y or Above", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59f1e3327ddd0f0dcda6fe6f"), 
+    "createdAt" : ISODate("2017-10-26T13:29:22.612+0000"), 
+    "updatedAt" : ISODate("2017-10-26T13:29:22.612+0000"), 
+    "name" : "buy 1 get 1 Free", 
+    "__v" : NumberInt(0)
+}

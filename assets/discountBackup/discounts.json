@@ -1,0 +1,131 @@
+{ 
+    "_id" : ObjectId("59ed87aa0a9eb11654a1eb87"), 
+    "createdAt" : ISODate("2017-10-23T06:09:46.672+0000"), 
+    "updatedAt" : ISODate("2017-10-30T06:15:48.907+0000"), 
+    "name" : "Buy 1 get 20% off, buy 2 get 40% off", 
+    "xValue" : NumberInt(20), 
+    "amount" : NumberInt(0), 
+    "discountType" : ObjectId("59d329e334d0832185b7f577"), 
+    "gifts" : [
+
+    ], 
+    "products" : [
+
+    ], 
+    "__v" : NumberInt(0), 
+    "maxDiscountAmount" : NumberInt(40), 
+    "percent" : NumberInt(1), 
+    "yValue" : NumberInt(40)
+}
+{ 
+    "_id" : ObjectId("59ed877d0a9eb11654a1eb82"), 
+    "createdAt" : ISODate("2017-10-23T06:09:01.977+0000"), 
+    "updatedAt" : ISODate("2017-10-25T08:15:00.689+0000"), 
+    "name" : "Buy 1 get 10% off, buy 2 get 20% off", 
+    "xValue" : NumberInt(10), 
+    "amount" : NumberInt(0), 
+    "discountType" : ObjectId("59d329e334d0832185b7f577"), 
+    "gifts" : [
+        {
+            "_id" : ObjectId("59ed8d577b099627630a67bb"), 
+            "description" : "Demo gift Description", 
+            "name" : "Demo Gift", 
+            "photo" : "59ed8d3d7b099627630a67b4.png"
+        }, 
+        {
+            "_id" : ObjectId("59ed8d577b099627630a67ba"), 
+            "description" : "Demo gift Description", 
+            "name" : "Demo Gift", 
+            "photo" : "59ed8d3d7b099627630a67b4.png"
+        }
+    ], 
+    "products" : [
+        ObjectId("594ca167d7d8b53cf47e5b9c"), 
+        ObjectId("594ca169d7d8b53cf47e6114"), 
+        ObjectId("594ca168d7d8b53cf47e5e66")
+    ], 
+    "__v" : NumberInt(0), 
+    "maxDiscountAmount" : NumberInt(20), 
+    "percent" : NumberInt(1), 
+    "yValue" : NumberInt(20)
+}
+{ 
+    "_id" : ObjectId("59ede535d30c7e2ab3324eda"), 
+    "createdAt" : ISODate("2017-10-23T12:48:53.084+0000"), 
+    "updatedAt" : ISODate("2017-10-23T13:46:11.261+0000"), 
+    "discountType" : ObjectId("59ede2fcd30c7e2ab3324ece"), 
+    "name" : "Discount of Rs 500 on 5000 amount shopping", 
+    "xValue" : NumberInt(500), 
+    "yValue" : NumberInt(5000), 
+    "amount" : NumberInt(1), 
+    "minAmount" : NumberInt(5000), 
+    "maxDiscountAmount" : NumberInt(500), 
+    "gifts" : [
+
+    ], 
+    "products" : [
+        ObjectId("594ca169d7d8b53cf47e6114"), 
+        ObjectId("594ca167d7d8b53cf47e5b9c"), 
+        ObjectId("594ca168d7d8b53cf47e5e66")
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59f198f17ddd0f0dcda6fdaa"), 
+    "createdAt" : ISODate("2017-10-26T08:12:34.024+0000"), 
+    "updatedAt" : ISODate("2017-10-26T12:41:22.433+0000"), 
+    "discountType" : ObjectId("59e44d48f255331e48fc428f"), 
+    "name" : "Buy Goods Worth 5000 Get Free Gift", 
+    "xValue" : NumberInt(5000), 
+    "gifts" : [
+        {
+            "_id" : ObjectId("59f1992e7ddd0f0dcda6fdb9"), 
+            "description" : "Books For Reading", 
+            "name" : "Book", 
+            "photo" : "59f1991d7ddd0f0dcda6fdb2.png"
+        }, 
+        {
+            "_id" : ObjectId("59f1992e7ddd0f0dcda6fdb8"), 
+            "description" : "Books For Reading", 
+            "name" : "Book", 
+            "photo" : "59f1991d7ddd0f0dcda6fdb2.png"
+        }
+    ], 
+    "products" : [
+        ObjectId("594ca167d7d8b53cf47e5b9c"), 
+        ObjectId("594ca169d7d8b53cf47e6114")
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59f1e37c7ddd0f0dcda6fe74"), 
+    "createdAt" : ISODate("2017-10-26T13:30:36.559+0000"), 
+    "updatedAt" : ISODate("2017-10-30T08:19:04.983+0000"), 
+    "discountType" : ObjectId("59f1e3327ddd0f0dcda6fe6f"), 
+    "name" : "Buy 1 Get 1 Free", 
+    "gifts" : [
+
+    ], 
+    "products" : [
+        ObjectId("594ca169d7d8b53cf47e6114"), 
+        ObjectId("594ca168d7d8b53cf47e5ef2"), 
+        ObjectId("594ca168d7d8b53cf47e5e66")
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59f06c1d647252477439a1eb"), 
+    "createdAt" : ISODate("2017-10-25T10:49:01.525+0000"), 
+    "updatedAt" : ISODate("2017-10-30T11:19:14.586+0000"), 
+    "discountType" : ObjectId("59f06bc7647252477439a1e4"), 
+    "name" : "Get a discount coupon of Rs 500 when buying goods worth 5000 or above", 
+    "xValue" : NumberInt(500), 
+    "yValue" : NumberInt(5000), 
+    "gifts" : [
+
+    ], 
+    "products" : [
+        ObjectId("594ca169d7d8b53cf47e6114")
+    ], 
+    "__v" : NumberInt(0)
+}

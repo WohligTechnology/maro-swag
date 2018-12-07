@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+
+    <table width="100%" cellpadding="5" cellspacing="5" style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: #555; font-size:14px; margin:0 auto; border:solid 1px gray; ">
+        <tbody>
+            <tr>
+                <td align="center " style="font-size:20px; ">
+                    <strong>Tax Invoice</strong>
+                </td>
+            </tr>
+            <tr>
+                <td align="center ">
+                    <img src="<%=env.realHost%>/img/home/logo.png " alt="Logo " style="max-width: 130px; height:auto; ">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100% " cellpadding="5 " cellspacing="0 " style="border:solid 1px gray; background:#eee; ">
+                        <tr>
+                            <td width="50% " style="font-size:10px ">
+                                <div>
+                                    <strong>Order Number:</strong>
+                                    <span>&nbsp; &nbsp;
+                                    <%= orderNo %>
+                                </span>
+                                </div>
+
+                            </td>
+                            <td width="50% " style="font-size:10px ">
+                                <div>
+                                    <strong>Date:</strong>
+                                    <span>&nbsp; &nbsp;
+                                    <%= date %>
+                                </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="50% " style="font-size:10px ">
+                                <div>
+                                    <strong>Invoice Number:</strong>
+                                    <span>&nbsp; &nbsp;
+                                    <%= invoiceNumber %>
+                                </span>
+                                </div>
+                            </td>
+                            <td width="50% " style="font-size:10px ">
+                                <div>
+                                    <strong>GST Number:</strong>
+                                    <span>&nbsp; &nbsp; 76869606</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table width="100% " cellpadding="5 " cellspacing="0 ">
+                        <thead>
+                            <tr>
+                                <th align="center " style="border: 1px solid #ddd;font-size:10px ">Customer Name</th>
+                                <th align="center " style="border: 1px solid #ddd;font-size:10px ">Billing Address</th>
+                                <th align="center " style="border: 1px solid #ddd;font-size:10px ">Shipping Address</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td align="center " style="background:#eee;border: 1px solid #ddd;font-size:10px ">
+                                <%if (user.firstName !==undefined) { %>
+                                    <%= user.firstName %>
+                                        <% } %>
+                                            <%if (user.middleName !==undefined) { %>
+                                                <%= user.middleName %>
+                                                    <% } %>
+                                                        <%if (user.lastName !==undefined) { %>
+                                                            <%= user.lastName %>
+                                                                <% } %>
+                            </td>
+                            <td align="center " style="background:#eee;border: 1px solid #ddd;font-size:10px ">
+                                <address style="font-style: normal; ">
+                                    <%= user.billingAddress.line1 %>
+                                        <%= user.billingAddress.line2 %>
+                                            <%= user.billingAddress.line3 %>
+                                                <%= user.billingAddress.city %>
+                                                    <%= user.billingAddress.state %>
+                                                        <%= user.billingAddress.pincode %>
+                                                            <%= user.billingAddress.country %>
+                                </address>
+                            </td>
+                            <td align="center " style="background:#eee; font-size:10px; border: 1px solid #ddd; ">
+                                <address style="font-style: normal; ">
+
+                                    <%= user.shippingAddresses[0].line1 %>
+                                        <%= user.shippingAddresses[0].line2 %>
+                                            <%= user.shippingAddresses[0].line3 %>
+                                                <%= user.shippingAddresses[0].city %>
+                                                    <%= user.shippingAddresses[0].state %>
+                                                        <%= user.shippingAddresses[0].pincode %>
+                                                            <%= user.shippingAddresses[0].country %>
+
+                                </address>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table width="100% " cellpadding="5 " cellspacing="0 ">
+                        <thead>
+                            <tr>
+                                <th align="center " style="border-bottom: 1px solid #ddd;background: #eee;font-size:10px; ">Item &amp; Description</th>
+                                <th align="center " style="border-bottom: 1px solid #ddd;background: #eee;font-size:10px ">Discount Percentage</th>
+                                <th align="center " style="border-bottom: 1px solid #ddd;background: #eee;font-size:10px ">Discount Amount</th>
+                                <th align="center " style="border-bottom: 1px solid #ddd;background: #eee;font-size:10px ">Total Amount </th>
+                                <th align="center " style="border-bottom: 1px solid #ddd;background: #eee;font-size:10px ">Unit Price</th>
+                                <th align="center " style="border-bottom: 1px solid #ddd;background: #eee;font-size:10px ">Quantity</th>
+                                <th align="center " style="border-bottom: 1px solid #ddd;background: #eee;font-size:10px ">MRP</th>
+                            </tr>
+                        </thead>
+                        <% _.each(products,function(product) { %>
+                            <tr>
+                                <td align="center " style="border: 1px solid #ddd;font-size: 10px; ">
+                                    <div style=" color: #333; text-transform:uppercase; ">
+                                        <%= product.product.description %>
+                                    </div>
+                                    <div style="font-size: 10px; ">
+
+                                        <span>
+                                        <%= product.product.productCode %>
+                                    </span>
+                                    </div>
+                                </td>
+                                <td align="center " style="border: 1px solid #ddd;font-size: 10px; ">
+                                    <%= product.discountPercent %>
+                                </td>
+                                <td align="center " style="border: 1px solid #ddd;font-size: 10px; ">&#8377;&nbsp;
+                                    <%= product.discountPercent %>
+                                </td>
+                                <td align="center " style="border: 1px solid #ddd;font-size: 10px; ">&#8377;&nbsp;
+                                    <%= product.priceAfterDiscount %>
+                                </td>
+                                <td align="center " style="border: 1px solid #ddd;font-size: 10px; ">
+                                    &#8377;&nbsp;
+                                    <%= _.round(product.unitPrice) %>
+                                </td>
+                                <td align="center " style="border: 1px solid #ddd;font-size: 10px; ">
+                                    <%= product.quantity %>
+                                </td>
+                                <td align="center " style="border: 1px solid #ddd;font-size: 10px; ">&#8377;&nbsp;
+                                    <%= _.round(product.product.price) * product.quantity  %>
+                                </td>
+                            </tr>
+                            <% }); %>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td cellpadding="5" align="right">
+                    <table width="100%" cellpadding="8" cellspacing="5" style="border:solid 1px #ccc;background:#eee;">
+                        <tr>
+                            <td align="right" style="font-size: 10px;">
+                                <table width="35%" cellpadding="5">
+                                    <tr>
+                                        <td colspan="2" align="center" style="font-size: 10px;">
+                                            <strong>GRAND TOTAL</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="font-size: 10px;">Shipping and Handling</td>
+                                        <td align="" style="font-size: 8px;">
+                                            <span>&#8377;</span>
+                                            <%= shippingAmount %>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="font-size: 10px;">Discount</td>
+                                        <td align="" style="font-size: 8px;">
+                                            <span>&#8377;</span>
+                                            <%= totalDiscount %>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="font-size: 10px;">Total taxes</td>
+                                        <td align="" style="font-size: 8px;">
+                                            <span>&#8377;</span>
+                                            <%= gst %>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td align="left" style="font-size: 10px;">
+                                            <strong>Grand Total</strong>
+                                        </td>
+                                        <td align="" style="font-size: 8px;">
+                                            <strong>
+                                            <span>&#8377;</span>
+                                            <%= totalAmount %>
+                                        </strong>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>
+                    <table width="100% " cellpadding="5 " cellspacing="0 ">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 8px;background: #341314; color:white;font-size: 11px;line-height: 1.42857143;vertical-align: middle;text-align: center;">
+                                    Burntumber Fashion Pvt Ltd© Copyright 2018
+                                </td>
+                                <td style="padding: 8px;font-size: 11px;line-height: 1.42857143;vertical-align: middle;background: #341314;">
+                                    <div style="width: 100%; height: 100%;display:table;">
+                                        <div style="width:47%;color:white;display:table-cell; text-align:right; vertical-align:middle">
+                                            <div>Follow us on</div>
+                                        </div>
+                                        <div style="color:white;display:table-cell; text-align:left; vertical-align:middle">
+
+                                            <ul style="padding-left: 0;margin: 0;list-style: none;">
+
+                                                <li style="width: 22px;height: 22px;padding: 0 5px;margin-left: 0;display:inline-block; vertical-align:middle;">
+                                                    <div style="width:100%;height:100%; display:table">
+                                                        <a href="" style="width: 100%;height: 100%;border: 1px dashed white;background: transparent;color:white;display:table-cell; text-align:center; vertical-align:middle;"><img src="<%=env.realHost%>/img/emailer/facebook.png" alt="Click on Facebook" width="12" height="12" style="vertical-align: middle;">
+                                </a></div>
+                                                </li>
+                                                <li style="width: 22px;height: 22px;padding: 0 5px;margin-left: 0;display:inline-block; vertical-align:middle;">
+                                                    <div style="width:100%;height:100%; display:table"> <a href="" style="width: 100%;height: 100%;border: 1px dashed white;background: transparent;color:white;display:table-cell; text-align:center; vertical-align:middle;"><img src="<%=env.realHost%>/img/emailer/twitter.png" alt="Click on twiter" width="12" height="12" style="vertical-align: middle;"></a></div>
+                                                </li>
+                                                <li style="width: 22px;height: 22px;padding: 0 5px;margin-left: 0;display:inline-block; vertical-align:middle;">
+                                                    <div style="width:100%;height:100%; display:table"> <a href="" style="width: 100%;height: 100%;border: 1px dashed white;background: transparent;color:white;display:table-cell; text-align:center; vertical-align:middle;">
+                                    <img src="<%=env.realHost%>/img/emailer/instagram.png" alt="Click on instagram" width="12" height="12" style="vertical-align: middle;"></a></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>
