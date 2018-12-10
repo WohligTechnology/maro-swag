@@ -1,4 +1,4 @@
-myApp.controller('HomeCtrl', function ($scope, TemplateService, CartService, $state, myService, ModalService, WishlistService, NavigationService, ProductService, $timeout, $location) {
+myApp.controller('HomeCtrl', function ($scope, TemplateService, CartService, $state, myService, ModalService, WishlistService, NavigationService, ProductService, $timeout, $location, $stateParams) {
     $scope.template = TemplateService.getHTML("content/home.html");
     TemplateService.title = "Home"; //This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();
@@ -11,6 +11,8 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, CartService, $st
         image: 'img/home/1.jpg',
         extLink: 'home'
     }, ];
+
+   
 
     // <!--start of All Categorie-->
 

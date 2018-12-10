@@ -12,6 +12,10 @@ myApp.controller('IndividualPageCtrl', function ($scope, $rootScope, $http, $sta
         console.log(data);
         $scope.formSubmitted = true;
     };
+
+    $scope.productId = $stateParams.Id;
+    console.log("This is my id", $scope.productId);
+
     $scope.updateQuantity = function (oper) {
         $scope.reqQuantity += parseInt(oper);
     }
@@ -19,6 +23,7 @@ myApp.controller('IndividualPageCtrl', function ($scope, $rootScope, $http, $sta
     var data = {
         productId: $stateParams.id
     };
+    /**
     ProductService.getProductDetails(data, function (data) {
         var productId = [];
         var grandTotal = 0;
@@ -194,5 +199,43 @@ myApp.controller('IndividualPageCtrl', function ($scope, $rootScope, $http, $sta
             scope: $scope
         });
     };
+*/
 
-})
+    $scope.productImages = [{
+        productId: '1',
+        image: 'img/home/8.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
+        extLink: 'home'
+    }, {
+        productId: '2',
+        image: 'img/home/9.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
+        extLink: 'home'
+    }, {
+        productId: '3',
+        image: 'img/home/10.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
+        extLink: 'home'
+    }, {
+        productId: '4',
+        image: 'img/home/8.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
+        extLink: 'home'
+    }, {
+        productId: '5',
+        image: 'img/home/9.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
+        extLink: 'home'
+    }, {
+        productId: '6',
+        image: 'img/home/10.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
+        extLink: 'home'
+    }, ];
+});
