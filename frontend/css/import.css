@@ -13296,7 +13296,7 @@ input[type=number]::-webkit-outer-spin-button {
   .featured .featured__banner-detail .featured__icon-cart {
     position: absolute;
     right: 0;
-    bottom: 107px;
+    bottom: 97px;
     width: 35px;
     height: 35px;
     padding: 6px;
@@ -15077,7 +15077,7 @@ img.loading {
       padding: 5px;
       position: absolute;
       right: 0;
-      bottom: 20px;
+      bottom: 0px;
       font-size: 16px;
       color: white;
       background-color: #F18021; }
@@ -15102,7 +15102,6 @@ img.loading {
   margin-bottom: 5px; }
 
 .buy-info h5 {
-  height: 30px;
   margin: 0;
   color: #252525;
   display: -webkit-box;
@@ -15114,7 +15113,7 @@ img.loading {
 .buy-info p {
   line-height: 1;
   margin: 0px;
-  color: #F18021; }
+  color: black; }
 
 .buy-info h4 i {
   font-size: 15px; }
@@ -15143,52 +15142,33 @@ img.loading {
 .buy-info .buy-para {
   margin: 15px 4px; }
   .buy-info .buy-para h5 {
-    font-family: "NotoSans-Bold";
+    font-family: "FjallaOne-Regular";
     font-size: 15px; }
   .buy-info .buy-para hr {
     margin: 5px 0 3px; }
   .buy-info .buy-para .viewSize {
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: left center;
-    transform-origin: left center;
-    transition: all 0.35s ease;
-    width: auto;
-    height: 0;
-    border: 1px solid; }
+    opacity: 1; }
+    .buy-info .buy-para .viewSize .size-text a:hover {
+      text-decoration: none;
+      color: #000; }
+    .buy-info .buy-para .viewSize .size-text a:focus {
+      color: #F18021; }
   .buy-info .buy-para .view--btn {
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: left center;
-    transform-origin: left center;
-    transition: all 0.35s ease;
-    width: 115px;
+    width: 110px;
     padding: 3px 0; }
+    .buy-info .buy-para .view--btn:hover {
+      background-color: #c5661c; }
   .buy-info .buy-para .buy-para__sizes, .buy-info .buy-para .second-sec .viewSize, .second-sec .buy-info .buy-para .viewSize {
     width: 80%;
     vertical-align: top; }
   .buy-info .buy-para .buy-para__button .buy--btn {
-    width: 107px; }
+    padding: 3px 35px;
+    letter-spacing: 1px; }
+    .buy-info .buy-para .buy-para__button .buy--btn:hover {
+      background-color: #c5661c; }
   .buy-info .buy-para .size-text {
-    vertical-align: middle; }
-
-.buy-info:hover .viewSize {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-  width: auto;
-  height: auto; }
-
-.buy-info:hover .view--btn {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1); }
+    vertical-align: middle;
+    margin-top: 5px; }
 
 .listview {
   margin: 15px 0; }
@@ -15216,8 +15196,8 @@ img.loading {
   .listview .checkbox {
     margin-top: 15px; }
   .listview .buy--btn {
-    width: 150px;
-    padding: 3px 0;
+    padding: 3px 35px;
+    letter-spacing: 1px;
     margin-bottom: 10px; }
   .listview .list-view-table tbody > tr > td {
     border-top: 1px solid transparent; }
@@ -15273,7 +15253,7 @@ img.loading {
     .customer-choice .customer-choice__slider h3 i {
       padding-right: 6px; }
   .customer-choice .customer-choice__slider h4 {
-    font-family: vadodara-md;
+    font-family: FjallaOne-Regular;
     color: #252525;
     margin-top: 0; }
   .customer-choice .customer-choice__slider .flexslider {
@@ -15441,13 +15421,6 @@ img.loading {
     width: 100%; }
   .second-sec .viewSize p {
     padding: 2px 5px; }
-  .second-sec .viewSize:after {
-    content: "";
-    height: 60px;
-    position: absolute;
-    top: 9px;
-    right: 0;
-    border-right: 2px solid #F18021; }
 
 .second-sec .quantity {
   vertical-align: top;

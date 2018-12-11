@@ -24,7 +24,7 @@
                 <div class="individual-first relate visible-lg">
                     <div class="product-img">
                         <img ng-repeat="image in productImages track by $index" ng-elevate-zoom ng-src="{{image.image}}"
-                            data-zoom-image="{{image.image }}" class="img-responsive bg" >
+                            data-zoom-image="{{image.image }}" class="img-responsive bg">
                     </div>
                     <div class="individual-first__zoom">
                         <img ng-src="img/individual/zoom.png" alt="zoom" class="img-responsive">
@@ -66,9 +66,8 @@
                             <h3>
                                 <!--<i class="fa fa-inr " aria-hidden="true "></i>-->
                                 <!--<div class="inline-block">-->
-                                <span style="text-decoration: line-through; color: gray;" ng-show="product.price!=product.mrp">&#x20B9;
-                                    {{product.mrp}}</span>
-                                <span class="pull-right" ng-show="product.price!=product.mrp">&#x20B9;
+
+                                <span class="txt-black" ng-show="product.price!=product.mrp">&#x20B9;
                                     {{product.price|number:0}}</span>
                                 <!--</div>-->
                                 <!--<div class="inline-block">-->
@@ -121,7 +120,7 @@
                         </div>
                         <div class="inline-block quantity text-center">
                             <h5>QUANTITY </h5>
-                            <a ng-click="updateQuantity(-1) " ng-if="reqQuantity>1">
+                            <a ng-click="updateQuantity(-1) ">
                                 <i class="fa fa-minus square__bg" aria-hidden="true"></i>
                             </a>
                             <div class="inline-block">
@@ -131,7 +130,7 @@
                                     </div>
                                 </form>
                             </div>
-                            <a ng-click="updateQuantity(1)" ng-if="reqQuantity < product.quantity">
+                            <a ng-click="updateQuantity(1)">
                                 <i class="fa fa-plus square__bg" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -164,19 +163,19 @@
                                     <div class="col-md-5 col-sm-5 col-xs-6">
                                         <div class="leftContent">
                                             <ul class="list-unstyled">
-                                                <li class="flex-item-container spec" ng-if="product.brand">
+                                                <li class="flex-item-container spec">
                                                     <div class=" leftContent__specHead">
                                                         <p class="mb-0">Brand</p>
                                                     </div>
                                                     <div>
                                                         <ul class="list-unstyled">
                                                             <li>
-                                                                {{product.brand.name}}
+                                                                {{product.brand}}
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </li>
-                                                <li class="flex-item-container spec" ng-if="product.prodCollection">
+                                                <li class="flex-item-container spec">
                                                     <div class=" leftContent__specHead">
                                                         <div>
                                                             <p class="mb-0">Collection</p>
@@ -185,12 +184,12 @@
                                                     <div>
                                                         <ul class="list-unstyled">
                                                             <li>
-                                                                {{product.prodCollection.name}}
+                                                                {{product.prodCollection}}
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </li>
-                                                <li class=" flex-item-container spec" ng-if="product.style">
+                                                <li class=" flex-item-container spec">
                                                     <div class=" leftContent__specHead">
                                                         <div>
                                                             <p class="mb-0">Sleeve</p>
@@ -204,19 +203,19 @@
                                                         </ul>
                                                     </div>
                                                 </li>
-                                                <li class="flex-item-container spec" ng-if="product.fabric">
+                                                <li class="flex-item-container spec">
                                                     <div class=" leftContent__specHead">
                                                         <p class="mb-0">Fabric</p>
                                                     </div>
                                                     <div>
                                                         <ul class="list-unstyled">
                                                             <li>
-                                                                {{product.fabric.name}}
+                                                                {{product.fabric}}
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </li>
-                                                <li class=" flex-item-container spec" ng-if="product.color">
+                                                <li class=" flex-item-container spec">
                                                     <div class=" leftContent__specHead">
                                                         <div>
                                                             <p class="mb-0">Color</p>
@@ -225,7 +224,7 @@
                                                     <div>
                                                         <ul class="list-unstyled">
                                                             <li>
-                                                                {{product.color.name}}
+                                                                {{product.color}}
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -235,7 +234,7 @@
                                     </div>
 
                                     <div class="col-md-7 col-sm-7 col-xs-6">
-                                        <div class="right-content" ng-if="product.washcare">
+                                        <div class="right-content">
                                             <p class="marg0 weight-600">Washcare</p>
                                             <p class="washcare">{{product.washcare}}
                                             </p>
@@ -311,10 +310,11 @@
                         item-width="270" item-margin="25" min-items="3">
                         <li class="relate">
                             <div class="customer-choice__banner-detail relate">
-                                <img ng-src="{{new.img | serverimage}}" alt="" class="img-responsive">
-                                <div class="customer-choiced__cloth-desc">
-                                    <h3><i class="fa fa-inr" aria-hidden="true"></i>{{new.price |number:0}}</h3>
-                                    <h4>{{new.type}}</h4>
+                                <img ng-src="{{new.img}}" alt="" class="img-responsive">
+                                <div class="customer-choiced__cloth-desc txt">
+                                    <h3><i class="fa fa-inr txt-black" aria-hidden="true"></i><span class="txt-black">{{new.price
+                                            |number:0}}</span></h3>
+                                    <p>{{new.type}}</p>
                                 </div>
                                 <!--<div class="customer-choice__icon-heart">
                                     <i class="fa fa-heart" aria-hidden="true"></i>

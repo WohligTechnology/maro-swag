@@ -1,5 +1,5 @@
-<div class="listing-img hidden">
-    <img ng-src="{{banner.image | serverimage}}">
+<div class="listing-img hidden-sm">
+    <img ng-src="{{banner.image}}">
 </div>
 <div class="container">
     <div class="listing-container">
@@ -254,7 +254,7 @@
                     <!--<div infinite-scroll='loadMore()' infinite-scroll-distance='3'>-->
                     <div class="row" ng-repeat="row in products track by $index">
                         <div class="col-md-4 col-sm-4" ng-repeat="product in row track by $index">
-                            <div class="buy-info custom-checkbox">
+                            <div class="buy-info txt-black custom-checkbox">
                                 <div class="buy-slider slider-individual list-slider">
                                     <flex-slider flex-slide="image in product.images track by $index" prev-text=""
                                         next-text="" animation="slide" min-items="3">
@@ -275,9 +275,9 @@
                                         <h4>
                                             <!--<i class="fa fa-inr" aria-hidden="true"></i>-->
                                             <!--<div class="inline-block"> -->
-                                            <span style="color:gray;" ng-show="product.price!=product.mrp">&#x20B9;
+                                            <span ng-show="product.price!=product.mrp">
                                                 {{product.mrp}}</span>
-                                            <span class="pull-right" ng-show="product.price!=product.mrp">&#x20B9;
+                                            <span class="pull-right txt-black" ng-show="product.price!=product.mrp">&#x20B9;
                                                 {{product.price |number:0}}</span>
                                             <!--</div>-->
                                             <!--<div class="inline-block">-->
@@ -285,15 +285,14 @@
                                             <!--<span ng-show="product.price==product.mrp" class="pull-right">&#x20B9; {{product.price}}</span>-->
                                             <!--</div>-->
                                         </h4>
-                                        <h5 class="text-uppercase">{{product.productName}} <br>{{product.type.name}}</h5>
+                                        <p class="text-capitalize">{{product.productName}} <br>{{product.type.name}}</p>
                                         <div class="viewSize">
-                                            <p class="inline-block size-text">Sizes:</p>
-                                            <div class="inline-block buy-para__sizes" ng-if="product.sizes">
-                                                <p ng-repeat="size in product.sizes"> {{size.name}}</p>
+                                            <div class=" inline-block txt-black size-text buy-para__sizes">Sizes:
+                                                <a class="txt-black" ng-repeat="size in product.sizes"> {{size.name}}</a>
                                             </div>
-                                            <div class="inline-block buy-para__sizes">
-                                                <p> {{product.size.name}}</p>
-                                            </div>
+                                            <!-- <div class="inline-block buy-para__sizes"> -->
+                                            <!-- <p class="txt-black"> {{product.size.name}}</p> -->
+                                            <!-- </div> -->
                                         </div>
                                         <hr>
                                         <!--<p><input type="checkbox"> Add to compare</p>-->

@@ -5,6 +5,11 @@ myApp.controller('ListingPageCtrl', function ($scope, toastr, CartService, $root
     $scope.navigation = NavigationService.getNavigation();
     $scope.formSubmitted = false;
 
+
+    $scope.banner = {
+        image: 'img/listing/common.jpg'
+    };
+
     $scope.categories = [{
         id: '1',
         name: 'Casual',
@@ -58,8 +63,16 @@ myApp.controller('ListingPageCtrl', function ($scope, toastr, CartService, $root
                 image: 'img/home/8.jpg'
             }, ],
             price: '2899',
-            productName: 'Ghanta',
-            sizes: ['36', '38', '40'],
+            productName: 'Lines full sleeve shirt with rollup',
+            sizes: [{
+                name: '36'
+            }, {
+                name: '38'
+            }, {
+                name: '40'
+            }, {
+                name: '42'
+            }],
         },
         row1: {
             productId: '123',
@@ -73,8 +86,16 @@ myApp.controller('ListingPageCtrl', function ($scope, toastr, CartService, $root
                 image: 'img/home/8.jpg'
             }, ],
             price: '2899',
-            productName: 'Ghanta',
-            sizes: ['36', '38', '40'],
+            productName: 'Lines full sleeve shirt with rollup',
+            sizes: [{
+                name: '36'
+            }, {
+                name: '38'
+            }, {
+                name: '40'
+            }, {
+                name: '42'
+            }],
         },
         row2: {
             productId: '123',
@@ -88,8 +109,16 @@ myApp.controller('ListingPageCtrl', function ($scope, toastr, CartService, $root
                 image: 'img/home/8.jpg'
             }, ],
             price: '2899',
-            productName: 'Ghanta',
-            sizes: ['36', '38', '40'],
+            productName: 'Lines full sleeve shirt with rollup',
+            sizes: [{
+                name: '36'
+            }, {
+                name: '38'
+            }, {
+                name: '40'
+            }, {
+                name: '42'
+            }],
         },
         row3: {
             productId: '123',
@@ -103,8 +132,16 @@ myApp.controller('ListingPageCtrl', function ($scope, toastr, CartService, $root
                 image: 'img/home/8.jpg'
             }, ],
             price: '2899',
-            productName: 'Ghanta',
-            sizes: ['36', '38', '40'],
+            productName: 'Lines full sleeve shirt with rollup',
+            sizes: [{
+                name: '36'
+            }, {
+                name: '38'
+            }, {
+                name: '40'
+            }, {
+                name: '42'
+            }],
         },
         row4: {
             productId: '123',
@@ -118,9 +155,110 @@ myApp.controller('ListingPageCtrl', function ($scope, toastr, CartService, $root
                 image: 'img/home/8.jpg'
             }, ],
             price: '2899',
-            productName: 'Ghanta',
-            sizes: ['36', '38', '40'],
-        }
+            productName: 'Lines full sleeve shirt with rollup',
+            sizes: [{
+                name: '36'
+            }, {
+                name: '38'
+            }, {
+                name: '40'
+            }, {
+                name: '42'
+            }],
+        },
+        row5: {
+            productId: '123',
+            images: [{
+                image: 'img/home/8.jpg'
+            }, {
+                image: 'img/home/8.jpg'
+            }, {
+                image: 'img/home/8.jpg'
+            }, {
+                image: 'img/home/8.jpg'
+            }, ],
+            price: '2899',
+            productName: 'Lines full sleeve shirt with rollup',
+            sizes: [{
+                name: '36'
+            }, {
+                name: '38'
+            }, {
+                name: '40'
+            }, {
+                name: '42'
+            }],
+        },
+        row6: {
+            productId: '123',
+            images: [{
+                image: 'img/home/8.jpg'
+            }, {
+                image: 'img/home/8.jpg'
+            }, {
+                image: 'img/home/8.jpg'
+            }, {
+                image: 'img/home/8.jpg'
+            }, ],
+            price: '2899',
+            productName: 'Lines full sleeve shirt with rollup',
+            sizes: [{
+                name: '36'
+            }, {
+                name: '38'
+            }, {
+                name: '40'
+            }, {
+                name: '42'
+            }],
+        },
+        row7: {
+            productId: '123',
+            images: [{
+                image: 'img/home/8.jpg'
+            }, {
+                image: 'img/home/8.jpg'
+            }, {
+                image: 'img/home/8.jpg'
+            }, {
+                image: 'img/home/8.jpg'
+            }, ],
+            price: '2899',
+            productName: 'Lines full sleeve shirt with rollup',
+            sizes: [{
+                name: '36'
+            }, {
+                name: '38'
+            }, {
+                name: '40'
+            }, {
+                name: '42'
+            }],
+        },
+        row8: {
+            productId: '123',
+            images: [{
+                image: 'img/home/8.jpg'
+            }, {
+                image: 'img/home/8.jpg'
+            }, {
+                image: 'img/home/8.jpg'
+            }, {
+                image: 'img/home/8.jpg'
+            }, ],
+            price: '2899',
+            productName: 'Lines full sleeve shirt with rollup',
+            sizes: [{
+                name: '36'
+            }, {
+                name: '38'
+            }, {
+                name: '40'
+            }, {
+                name: '42'
+            }],
+        },
     }];
+
 
 });

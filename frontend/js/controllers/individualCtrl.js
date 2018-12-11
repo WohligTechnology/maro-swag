@@ -213,29 +213,56 @@ myApp.controller('IndividualPageCtrl', function ($scope, $rootScope, $http, $sta
         price: '2899',
         productName: 'Lines full sleeve shirt with rollup',
         extLink: 'home'
+    }, ];
+
+    $scope.product = {
+        productId: '1',
+        productName: 'Lines full sleeve shirt with rollup',
+        price: '2899',
+        description: 'Lines full sleeve shirt with rollup Lines full sleeve shirt with rollup Lines full sleeve shirt with rollup Lines full sleeve shirt with rollup',
+        brand: 'Maro Swag',
+        prodCollection: 'Amten Prints',
+        style: 'full sleeve foldable',
+        fabric: '56% Cotton 44% Tensal',
+        color: 'White',
+        washcare: 'Wash Dark colors seperately. Turn Inside Out Before washing and drying. Do not bleach. Trumble dry normal. Always dry in Shade. USe warm Iron'
+
+
+    };
+
+
+    $scope.featured = [{
+        productId: '1',
+        img: 'img/home/8.jpg',
+        price: '2899',
+        type: 'Lines full sleeve shirt with rollup',
+        extLink: 'home'
+    }, {
+        productId: '2',
+        img: 'img/home/9.jpg',
+        price: '2899',
+        type: 'Lines full sleeve shirt with rollup',
+        extLink: 'home'
     }, {
         productId: '3',
-        image: 'img/home/10.jpg',
+        img: 'img/home/10.jpg',
         price: '2899',
-        productName: 'Lines full sleeve shirt with rollup',
+        type: 'Lines full sleeve shirt with rollup',
         extLink: 'home'
     }, {
         productId: '4',
-        image: 'img/home/8.jpg',
+        img: 'img/home/8.jpg',
         price: '2899',
-        productName: 'Lines full sleeve shirt with rollup',
+        type: 'Lines full sleeve shirt with rollup',
         extLink: 'home'
+    }, ];
+    $scope.sizes = [{
+        name: '36'
     }, {
-        productId: '5',
-        image: 'img/home/9.jpg',
-        price: '2899',
-        productName: 'Lines full sleeve shirt with rollup',
-        extLink: 'home'
+        name: '38'
     }, {
-        productId: '6',
-        image: 'img/home/10.jpg',
-        price: '2899',
-        productName: 'Lines full sleeve shirt with rollup',
-        extLink: 'home'
+        name: '40'
+    }, {
+        name: '42'
     }, ];
 });

@@ -12,7 +12,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, CartService, $st
         extLink: 'home'
     }, ];
 
-   
+
 
     // <!--start of All Categorie-->
 

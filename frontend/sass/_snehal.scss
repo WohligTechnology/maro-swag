@@ -197,7 +197,7 @@ img.loading {
     .fa-shopping-cart {
       @include size(25px, 25px);
       @include padding(5px);
-      @include position(absolute, null 0 20px null);
+      @include position(absolute, null 0 0px null);
       font-size: 16px;
       color: white;
       background-color: $darkBrown1;
@@ -239,7 +239,7 @@ img.loading {
   }
 
   h5 {
-    height: 30px;
+    // height: 30px;
     @include margin(0 0 0 0);
     color: $darkGray;
     display: -webkit-box;
@@ -252,7 +252,7 @@ img.loading {
   p {
     line-height: 1;
     margin: 0px;
-    color: $darkBrown1;
+    color: black;
   }
 
   h4 {
@@ -277,7 +277,7 @@ img.loading {
     margin: 15px 4px;
 
     h5 {
-      font-family: "NotoSans-Bold";
+      font-family: "FjallaOne-Regular";
       font-size: 15px;
     }
 
@@ -287,32 +287,54 @@ img.loading {
     }
 
     .viewSize {
-      visibility: hidden;
-      opacity: 0;
-      @include transform(scaleX(0));
-      @include transform-origin(left center);
-      @include transition(all 0.35s ease);
-      @include size(auto, 0); // .buy-para__sizes {
+      // visibility: hidden;
+      // opacity: 0;
+      opacity: 1;
+
+      // @include transform(scaleX(1));
+      // @include size(auto, auto);
+      // @include transform(scaleX(0));
+      // @include transform-origin(left center);
+      // @include transition(all 0.35s ease);
+      // @include size(auto, 0); // .buy-para__sizes {
       //     @include margin(5px null 5px null);
       //     p {
       //         font-size: 14px;
       //         box-sizing: border-box;
-      border: 1px solid;
+      // border: 1px solid;
       //         padding: 2px;
       //         display: inline-block;
       //     }
       // }
+      .size-text {
+        a {
+          &:hover {
+            text-decoration: none;
+            color: #000;
+          }
+
+          &:focus {
+            color: $darkBrown1;
+          }
+        }
+      }
     }
 
     .view--btn {
-      visibility: hidden;
-      opacity: 0;
-      @include transform(scaleX(0));
-      @include transform-origin(left center);
-      @include transition(all 0.35s ease);
+      // visibility: hidden;
+      // opacity: 0;
+      // @include transform(scaleX(0));
+      // @include transform-origin(left center);
+      // @include transition(all 0.35s ease);
       @extend .btn--brown;
-      width: 115px;
-      @include padding(3px 0px); // display: none;
+      width: 110px;
+      @include padding(3px 0px);
+
+      &:hover {
+        background-color: #c5661c;
+      }
+
+      // display: none;
     }
 
     .buy-para__sizes {
@@ -323,29 +345,36 @@ img.loading {
     .buy-para__button {
       .buy--btn {
         @extend .btn--brown;
-        width: 107px;
+        @include padding(3px 35px);
+        // width: 107px;
+        letter-spacing: 1px;
+
+        &:hover {
+          background-color: #c5661c;
+        }
       }
     }
 
     .size-text {
       vertical-align: middle;
+      margin-top: 5px;
     }
   }
 
-  &:hover {
-    .viewSize {
-      visibility: visible;
-      opacity: 1;
-      @include transform(scaleX(1));
-      @include size(auto, auto);
-    }
+  // &:hover {
+  //   .viewSize {
+  //     visibility: visible;
+  //     opacity: 1;
+  //     @include transform(scaleX(1));
+  //     @include size(auto, auto);
+  //   }
 
-    .view--btn {
-      opacity: 1;
-      visibility: visible;
-      @include transform(scaleX(1));
-    }
-  }
+  // .view--btn {
+  //   opacity: 1;
+  //   visibility: visible;
+  //   @include transform(scaleX(1));
+  // }
+
 }
 
 .listview {
@@ -390,8 +419,9 @@ img.loading {
 
   .buy--btn {
     @extend .btn--brown;
-    width: 150px;
-    @include padding(3px 0);
+    @include padding(3px 35px);
+    // width: 107px;
+    letter-spacing: 1px;
     margin-bottom: 10px; //  @extend .btn--brownActive;
   }
 
@@ -485,7 +515,7 @@ img.loading {
     }
 
     h4 {
-      font-family: vadodara-md;
+      font-family: FjallaOne-Regular;
       color: #252525;
       @include margin(0 null null null);
     }
@@ -748,12 +778,12 @@ img.loading {
       @include padding(2px 5px);
     }
 
-    &:after {
-      content: "";
-      height: 60px;
-      @include position(absolute, 9px 0 null null);
-      border-right: 2px solid $darkBrown1;
-    }
+    // &:after {
+    //   content: "";
+    //   height: 60px;
+    //   @include position(absolute, 9px 0 null null);
+    //   border-right: 2px solid $darkBrown1;
+    // }
   }
 
   .quantity {
