@@ -209,7 +209,7 @@ myApp.controller('IndividualPageCtrl', function ($scope, $rootScope, $http, $sta
         extLink: 'home'
     }, {
         productId: '2',
-        image: 'img/home/9.jpg',
+        image: 'img/home/8.jpg',
         price: '2899',
         productName: 'Lines full sleeve shirt with rollup',
         extLink: 'home'

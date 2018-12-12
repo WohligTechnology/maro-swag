@@ -28,8 +28,8 @@
                                 data-zoom-image="{{image.image | serverimage}}" class="img-responsive" ng-if="$index == selectedImageIndex">
                         </div> -->
                         <div class="product-img">
-                            <img ng-repeat="image in product.images track by $index" ng-src="{{image.image | serverimage}}" alt="Product image" class="img-responsive"
-                                ng-if="$index == selectedImageIndex">
+                            <img ng-repeat="image in productImages track by $index" ng-src="{{image.image}}" alt="Product image"
+                                class="img-responsive">
                         </div>
                         <!-- <div class="individual-first__zoom">
                             <img ng-src="img/individual/zoom.png" alt="zoom" class="img-responsive">
@@ -37,18 +37,18 @@
                     </div>
                     <div class="individual-first relate hidden-lg">
                         <div class="product-img">
-                            <img ng-repeat="image in product.images track by $index" ng-src="{{image.image | serverimage}}" alt="Product image" class="img-responsive"
-                                ng-if="$index == selectedImageIndex">
+                            <img ng-repeat="image in productImages track by $index" ng-src="{{image.image}}" alt="Product image"
+                                class="img-responsive">
                         </div>
 
                     </div>
 
                     <div class="slider2 relate">
-                        <flex-slider flex-slide="image in product.images track by $index" prev-text="" next-text="" animation="slide" item-width="70"
-                            item-margin="15" min-items="3">
+                        <flex-slider flex-slide="image in productImages track by $index" prev-text="" next-text=""
+                            animation="slide" item-width="70" item-margin="15" min-items="3">
                             <li class="relate">
                                 <div class="customer-choice__banner-detail relate" style="cursor:pointer;">
-                                    <img ng-src="{{image.image | serverimage}}" alt="" class="img-responsive" ng-click="changeImage($index)">
+                                    <img ng-src="{{image.image}}" alt="" class="img-responsive" ng-click="changeImage($index)">
                                 </div>
                             </li>
                         </flex-slider>
@@ -59,7 +59,8 @@
                         <div class="pull-left">
                             <p class="prod-code__left">Product Code: {{product.productId}}</p>
                         </div>
-                        <p class="prod-code__right pull-right"><span> AVAILABILITY </span>: <span ng-show="product.quantity > 0">In Stock</span>
+                        <p class="prod-code__right pull-right"><span> AVAILABILITY </span>: <span ng-show="product.quantity > 0">In
+                                Stock</span>
                             <span ng-show="product.quantity < 1" style="color:red">Out Of Stock</span></p>
                     </div>
                     <div class="clearfix"></div>
@@ -79,12 +80,12 @@
                                     <!--</div>-->
                                 </h3>
                             </div>
-                            <div class="absolute-text" ng-if="!loggedUser">
+                            <div class="absolute-text">
                                 <a ng-click="openLoginModal()">Are you a member?</a>
                             </div>
                         </div>
                         <div class="second-sec border-div pd-bottom">
-                            <div class="viewSize inline-block relate" ng-if="arrayCheck">
+                            <div class="viewSize inline-block relate">
                                 <h5>SIZE </h5>
                                 <!--<div class="inline-block buy-para__sizes">-->
                                 <!--<p ng-class="{'active':activeButton==size.name}" ng-repeat="size in product.sizes track by $index" ng-if="product.sizes&&product.size"
@@ -105,7 +106,7 @@
                                     <a class="linking" ng-click="openSizeChart()">Size Chart</a>
                                 </div>
                             </div>
-                            <div class="viewSize inline-block relate" ng-if="!arrayCheck">
+                            <div class="viewSize inline-block relate">
                                 <h5>SIZE</h5>
                                 <div class="inline-block buy-para__sizes">
                                     <p ng-click="selectSize(product.size)" ng-class="{'active':activeButton==product.size.name}">{{product.size.name}}</p>
@@ -120,7 +121,7 @@
                             </div>
                             <div class="inline-block quantity relate text-center">
                                 <h5>QUANTITY </h5>
-                                <a ng-click="updateQuantity(-1)" ng-if="reqQuantity>1">
+                                <a ng-click="updateQuantity(-1)">
                                     <i class="fa fa-minus square__bg" aria-hidden="true"></i>
                                 </a>
                                 <div class="inline-block">
@@ -130,7 +131,7 @@
                                         </div>
                                     </form>
                                 </div>
-                                <a ng-click="updateQuantity(1)" ng-if="reqQuantity < product.quantity">
+                                <a ng-click="updateQuantity(1)">
                                     <i class="fa fa-plus square__bg"></i>
                                 </a>
                             </div>
@@ -188,17 +189,17 @@
                                         <div class="col-md-5 col-sm-5 col-xs-6">
                                             <div class="leftContent">
                                                 <ul class="list-unstyled">
-                                                    <li class="flex-item-container spec" ng-if="product.brand">
+                                                    <li class="flex-item-container spec">
                                                         <div class="inline-block leftContent__specHead">
                                                             <p>Brand</p>
                                                         </div>
                                                         <div class="inline-block">
-                                                            <ul class="list-unstyled" ng-if="!product.brand.name">
+                                                            <ul class="list-unstyled">
                                                                 <li>
                                                                     {{product.brand}}
                                                                 </li>
                                                             </ul>
-                                                            <ul class="list-unstyled" ng-if="product.brand.name">
+                                                            <ul class="list-unstyled">
                                                                 <li>
                                                                     {{product.brand.name}}
                                                                 </li>
@@ -219,7 +220,7 @@
                                                             </ul>
                                                             <ul class="list-unstyled" ng-if="product.prodCollection.name">
                                                                 <li>
-                                                                    {{product.prodCollection.name}}
+                                                                    {{product.prodCollection}}
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -250,7 +251,7 @@
                                                             </ul>
                                                             <ul class="list-unstyled" ng-if="product.fabric.name">
                                                                 <li>
-                                                                    {{product.fabric.name}}
+                                                                    {{product.fabric}}
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -269,7 +270,7 @@
                                                             </ul>
                                                             <ul class="list-unstyled" ng-if="product.color.name">
                                                                 <li>
-                                                                    {{product.color.name}}
+                                                                    {{product.color}}
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -304,30 +305,35 @@
                                         </div>
                                     </div>
                             </uib-accordion>
+                        </div>
+                        <div class="fifth-sec custom-checkbox">
+                            <div class="checkbox inline-block">
+                                <input type="checkbox" id="f2" ng-model="myVarss" ng-checked="checkStateOnReload(product.productId)"
+                                    ng-click="clickfun(product);">
+                                <label for="f2"> Add to compare</label>
                             </div>
-                            <div class="fifth-sec custom-checkbox">
-                                <div class="checkbox inline-block">
-                                    <input type="checkbox" id="f2" ng-model="myVarss" ng-checked="checkStateOnReload(product.productId)" ng-click="clickfun(product);">
-                                    <label for="f2"> Add to compare</label>
-                                </div>
-                                <!--<p class="inline-block"><input type="checkbox">Add to compare</p>-->
-                                <div class="inline-block ml-10">
-                                    <img src="img/listing/sale.png" class="img-responsive inline-block"><a>Offer?</a>
-                                </div>
-                                <p class="inline-block" ng-repeat="discount in applicableDiscounts track by $index">{{discount.name}} <span ng-if="$index!=applicableDiscountsLength-1">,</span>
-                                </p>
+                            <!--<p class="inline-block"><input type="checkbox">Add to compare</p>-->
+                            <div class="inline-block ml-10">
+                                <img src="img/listing/sale.png" class="img-responsive inline-block"><a>Offer?</a>
                             </div>
-                            <div class="individual-btn">
-                                <button class=" btn btn-default btn--brown text-uppercase btn-add" ng-disabled="product.quantity < 1" ng-click="addToCart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  ADD TO CART</button>
-                                <button class="btn btn-default btn--brown text-uppercase btn-wish" ng-click="addToWishlist()"><i class="fa fa-heart" aria-hidden="true"></i>  ADD TO WISHLIST</button>
-                            </div>
+                            <p class="inline-block" ng-repeat="discount in applicableDiscounts track by $index">{{discount.name}}
+                                <span ng-if="$index!=applicableDiscountsLength-1">,</span>
+                            </p>
+                        </div>
+                        <div class="individual-btn">
+                            <button class=" btn btn-default btn--brown text-uppercase btn-add" ng-disabled="product.quantity < 1"
+                                ng-click="addToCart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ADD TO
+                                CART</button>
+                            <button class="btn btn-default btn--brown text-uppercase btn-wish" ng-click="addToWishlist()"><i
+                                    class="fa fa-heart" aria-hidden="true"></i> ADD TO WISHLIST</button>
                         </div>
                     </div>
                 </div>
-
             </div>
-        </div>
-        <div class="close-modal qv-close-modal">
-            <button type="button" class="btn close-modal--btn-circle" ng-click="closeModal()">X</button>
+
         </div>
     </div>
+    <div class="close-modal qv-close-modal">
+        <button type="button" class="btn close-modal--btn-circle" ng-click="closeModal()">X</button>
+    </div>
+</div>

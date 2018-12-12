@@ -77,13 +77,13 @@ myApp.controller('ListingPageCtrl', function ($scope, toastr, CartService, $root
         row1: {
             productId: '123',
             images: [{
-                image: 'img/home/8.jpg'
+                image: 'img/home/9.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/9.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/9.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/9.jpg'
             }, ],
             price: '2899',
             productName: 'Lines full sleeve shirt with rollup',
@@ -100,13 +100,13 @@ myApp.controller('ListingPageCtrl', function ($scope, toastr, CartService, $root
         row2: {
             productId: '123',
             images: [{
-                image: 'img/home/8.jpg'
+                image: 'img/home/11.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/11.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/11.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/11.jpg'
             }, ],
             price: '2899',
             productName: 'Lines full sleeve shirt with rollup',
@@ -123,13 +123,13 @@ myApp.controller('ListingPageCtrl', function ($scope, toastr, CartService, $root
         row3: {
             productId: '123',
             images: [{
-                image: 'img/home/8.jpg'
+                image: 'img/home/12.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/12.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/12.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/12.jpg'
             }, ],
             price: '2899',
             productName: 'Lines full sleeve shirt with rollup',
@@ -146,13 +146,13 @@ myApp.controller('ListingPageCtrl', function ($scope, toastr, CartService, $root
         row4: {
             productId: '123',
             images: [{
-                image: 'img/home/8.jpg'
+                image: 'img/home/10.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/10.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/10.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/10.jpg'
             }, ],
             price: '2899',
             productName: 'Lines full sleeve shirt with rollup',
@@ -169,13 +169,13 @@ myApp.controller('ListingPageCtrl', function ($scope, toastr, CartService, $root
         row5: {
             productId: '123',
             images: [{
-                image: 'img/home/8.jpg'
+                image: 'img/home/13.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/13.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/13.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/13.jpg'
             }, ],
             price: '2899',
             productName: 'Lines full sleeve shirt with rollup',
@@ -192,13 +192,13 @@ myApp.controller('ListingPageCtrl', function ($scope, toastr, CartService, $root
         row6: {
             productId: '123',
             images: [{
-                image: 'img/home/8.jpg'
+                image: 'img/home/19.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/19.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/19.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/19.jpg'
             }, ],
             price: '2899',
             productName: 'Lines full sleeve shirt with rollup',
@@ -215,13 +215,13 @@ myApp.controller('ListingPageCtrl', function ($scope, toastr, CartService, $root
         row7: {
             productId: '123',
             images: [{
-                image: 'img/home/8.jpg'
+                image: 'img/home/10.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/10.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/10.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/10.jpg'
             }, ],
             price: '2899',
             productName: 'Lines full sleeve shirt with rollup',
@@ -238,13 +238,13 @@ myApp.controller('ListingPageCtrl', function ($scope, toastr, CartService, $root
         row8: {
             productId: '123',
             images: [{
-                image: 'img/home/8.jpg'
+                image: 'img/home/12.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/12.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/12.jpg'
             }, {
-                image: 'img/home/8.jpg'
+                image: 'img/home/12.jpg'
             }, ],
             price: '2899',
             productName: 'Lines full sleeve shirt with rollup',
@@ -260,5 +260,52 @@ myApp.controller('ListingPageCtrl', function ($scope, toastr, CartService, $root
         },
     }];
 
+    $scope.quickviewProduct = function (product) {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/quickview-product.html",
+            controller: 'ListingPageCtrl',
+            scope: $scope,
+            size: 'lg',
+        })
+    }
+
+    $scope.productImages = [{
+        productId: '1',
+        image: 'img/home/8.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
+        extLink: 'home'
+    }, {
+        productId: '2',
+        image: 'img/home/8.jpg',
+        price: '2899',
+        productName: 'Lines full sleeve shirt with rollup',
+        extLink: 'home'
+    }, ];
+
+    $scope.product = {
+        productId: '1',
+        productName: 'Lines full sleeve shirt with rollup',
+        price: '2899',
+        description: 'Lines full sleeve shirt with rollup Lines full sleeve shirt with rollup Lines full sleeve shirt with rollup Lines full sleeve shirt with rollup',
+        brand: 'Maro Swag',
+        prodCollection: 'Amten Prints',
+        style: 'full sleeve foldable',
+        fabric: '56% Cotton 44% Tensal',
+        color: 'White',
+        washcare: 'Wash Dark colors seperately. Turn Inside Out Before washing and drying. Do not bleach. Trumble dry normal. Always dry in Shade. USe warm Iron'
+
+    };
+
+    $scope.sizes = [{
+        name: '36'
+    }, {
+        name: '38'
+    }, {
+        name: '40'
+    }, {
+        name: '42'
+    }, ];
 
 });
