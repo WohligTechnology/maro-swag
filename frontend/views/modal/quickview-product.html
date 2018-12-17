@@ -71,8 +71,7 @@
                                 <h3>
                                     <!--<i class="fa fa-inr" aria-hidden="true"></i>-->
                                     <!--<div class="inline-block">-->
-                                    <span style="text-decoration: line-through; color:gray;" ng-show="product.price!=product.mrp">&#x20B9;{{product.mrp}}</span>
-                                    <span class="pull-right" ng-show="product.price!=product.mrp">&#x20B9;{{product.price|number:0}}</span>
+                                    <span class="pull-left" ng-show="product.price!=product.mrp">&#x20B9;{{product.price|number:0}}</span>
                                     <!--</div>-->
                                     <!--<div class="inline-block">-->
                                     <span ng-show="product.price==product.mrp">&#x20B9;{{product.price |number:0}}</span>
@@ -186,7 +185,7 @@
                                         </h4>
                                     </uib-accordion-heading>
                                     <div class="row">
-                                        <div class="col-md-5 col-sm-5 col-xs-6">
+                                        <div class="col-md-6 col-sm-6 col-xs-6 padd-rt0">
                                             <div class="leftContent">
                                                 <ul class="list-unstyled">
                                                     <li class="flex-item-container spec">
@@ -194,12 +193,12 @@
                                                             <p>Brand</p>
                                                         </div>
                                                         <div class="inline-block">
-                                                            <ul class="list-unstyled">
+                                                            <ul class="list-unstyled text-left">
                                                                 <li>
                                                                     {{product.brand}}
                                                                 </li>
                                                             </ul>
-                                                            <ul class="list-unstyled">
+                                                            <ul class="list-unstyled text-right">
                                                                 <li>
                                                                     {{product.brand.name}}
                                                                 </li>
@@ -207,13 +206,13 @@
                                                         </div>
                                                     </li>
                                                     <li class="flex-item-container spec" ng-if="product.prodCollection">
-                                                        <div class="inline-block leftContent__specHead">
+                                                        <div class="inline-block leftContent__specHead text-left">
                                                             <div>
                                                                 <p>Collection</p>
                                                             </div>
                                                         </div>
                                                         <div class="inline-block">
-                                                            <ul class="list-unstyled" ng-if="!product.prodCollection.name">
+                                                            <ul class="list-unstyled text-right" ng-if="!product.prodCollection.name">
                                                                 <li>
                                                                     {{product.prodCollection}}
                                                                 </li>
@@ -232,7 +231,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="inline-block">
-                                                            <ul class="list-unstyled">
+                                                            <ul class="list-unstyled text-left">
                                                                 <li>
                                                                     {{product.style}}
                                                                 </li>
@@ -278,7 +277,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-md-7 col-xs-6">
+                                        <div class="col-md-6 padd0 col-xs-6">
                                             <div class="right-content" ng-if="product.washcare">
                                                 <p class="marg0 weight-600">Washcare</p>
                                                 <p class="washcare">{{product.washcare}}
@@ -334,6 +333,6 @@
         </div>
     </div>
     <div class="close-modal qv-close-modal">
-        <button type="button" class="btn close-modal--btn-circle" ng-click="closeModal()">X</button>
+        <button type="button" class="btn close-modal--btn-circle" ng-click="$dismiss()">X</button>
     </div>
 </div>

@@ -15366,13 +15366,19 @@ img.loading {
   padding: 30px 50px; }
 
 .individual-btn .btn-add {
-  font-size: 15px;
-  padding: 6px 35px; }
+  font-size: 14px;
+  padding: 6px 30px;
+  letter-spacing: 1px; }
+  .individual-btn .btn-add:hover {
+    background-color: #c5661c; }
 
 .individual-btn .btn-wish {
-  font-size: 15px;
-  padding: 6px 35px;
+  font-size: 14px;
+  padding: 6px 30px;
+  letter-spacing: 1px;
   margin-left: 15px; }
+  .individual-btn .btn-wish:hover {
+    background-color: #c5661c; }
 
 .border-div {
   border-bottom: 1px solid #e7dada; }
@@ -16021,8 +16027,8 @@ p.compare-btn {
     border-right: none; }
   .brands-images .row:first-child {
     border-top: 1px solid grey; }
-  .brands-images .col-md-3:last-child {
-    border-right: 1px solid grey; }
+  .brands-images .col-md-3 {
+    border: 1px solid grey; }
 
 .brand1 {
   padding: 25px 45px; }
@@ -16106,6 +16112,46 @@ p.compare-btn {
           transform: translate(-50%, -50%);
   z-index: 9999;
   opacity: 1; }
+
+.btnsoc.no-pad {
+  padding: 0 !important;
+  text-decoration: none; }
+
+.mar-left {
+  margin-left: -6em; }
+
+.gogbtn .btnsoc {
+  font-size: 15px;
+  padding: 10px 0 0;
+  color: #252525;
+  margin-top: 10px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  height: 45px;
+  cursor: pointer; }
+  .gogbtn .btnsoc i {
+    font-size: 18px;
+    padding: 4px 15px;
+    width: 45px;
+    float: left; }
+  .gogbtn .btnsoc span {
+    line-height: 1.5;
+    float: left; }
+
+.gogbtn .gplus {
+  background: #fff;
+  margin-top: 0; }
+
+.gogbtn .fbook {
+  background: #ffffff; }
+  .gogbtn .fbook .fa-facebook {
+    -webkit-text-fill-color: #3b5998; }
+
+.gogbtn .twit {
+  background: #ffffff; }
+  .gogbtn .twit .fa-twitter {
+    color: #55acee; }
 
 #fancybox-loading,
 .fancybox-close,
